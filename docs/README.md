@@ -1,6 +1,6 @@
 ---
 home: true
-title: Home
+title: my website
 heroImage: https://vuejs.press/images/hero.png
 actions:
   - text: Get Started
