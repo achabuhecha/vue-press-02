@@ -4,9 +4,8 @@ import { viteBundler } from '@vuepress/bundler-vite'
 console.log('🔥 VUEPRESS_BASE =', process.env.VUEPRESS_BASE);
 export default defineUserConfig({
   // https://achabuhecha.github.io/vue-press-02/
-  // base: '/vue-press-02/',
+  base: '/vue-press-02/',
   // base: process.env.VUEPRESS_BASE || '/',
-  // base: '/',
   lang: 'zh-CN', // en-US
   title: '自定义X',
   locales: {
