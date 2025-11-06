@@ -31,6 +31,9 @@ jobs:
               # npm i -g pnpm
               # pnpm run init
               # pnpm run docs:build
+        # 运行构建脚本
+        - name: 构建 VuePress 站点
+          run: npm docs:build
           env:
               NODE_OPTIONS: '--max_old_space_size=4096'
 
