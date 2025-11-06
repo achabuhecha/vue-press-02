@@ -3,7 +3,7 @@ import { defineUserConfig } from 'vuepress'
 import { viteBundler } from '@vuepress/bundler-vite'
 
 export default defineUserConfig({
-  base: '/vue-press-02/',
+  // base: '/vue-press-02/',
   lang: 'en-US',
 
   title: 'VuePress',
@@ -12,7 +12,7 @@ export default defineUserConfig({
   theme: defaultTheme({
     logo: 'https://vuejs.press/images/hero.png',
 
-    navbar: ['/', '/get-started'],
+    navbar: ['/', '/get-started', 'setGithubActions'],
   }),
 
   bundler: viteBundler(),
