@@ -24,25 +24,32 @@ jobs:
           with:
               node-version: 21.7.3
 
-        # 3. 安装依赖并构建
+       # 3. 安装依赖并构建
         - name: Install and Build
           run: |
               npm install --frozen-lockfile
               # npm i -g pnpm
               # pnpm run init
               # pnpm run docs:build
-        # 运行构建脚本
-        - name: 构建 VuePress 站点
-          run: npm run docs:build
-          env:
-              NODE_OPTIONS: '--max_old_space_size=4096'
 
-        # 4. 部署到 GitHub Pages
+        # 4. 构建 VuePress 站点，并动态设置 base
+        - name: 构建 VuePress 站点
+          run: |
+            npm run docs:build
+          env:
+            NODE_OPTIONS: '--max_old_space_size=4096'
+            # 动态设置 VuePress 的 base，用于生产环境
+            VUEPRESS_BASE: /${{ github.repository_name }}/
+            
+            # 注意：github.repository_name 是仓库名（如 "my-docs"）
+            # 所以 VUEPRESS_BASE 会被设置成 "/my-docs/"，这正是 VuePress 需要的子路径
+
+        # 5. 部署到 GitHub Pages
         - name: 部署到 GitHub Pages
           uses: crazy-max/ghaction-github-pages@v4
           with:
-              target_branch: gh-pages
-              build_dir: docs/.vuepress/dist
+            target_branch: gh-pages
+            build_dir: docs/.vuepress/dist
           env:
             # @see https://docs.github.com/cn/actions/reference/authentication-in-a-workflow#about-the-github_token-secret
             GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
