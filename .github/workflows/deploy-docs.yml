@@ -39,7 +39,8 @@ jobs:
           env:
             NODE_OPTIONS: '--max_old_space_size=4096'
             # 动态设置 VuePress 的 base，用于生产环境
-            VUEPRESS_BASE: /${{ github.repository_name }}/
+            # VUEPRESS_BASE: /${{ github.repository_name }}/
+            VUEPRESS_BASE: /vue-press-02/
             
             # 注意：github.repository_name 是仓库名（如 "my-docs"）
             # 所以 VUEPRESS_BASE 会被设置成 "/my-docs/"，这正是 VuePress 需要的子路径
