@@ -95,7 +95,8 @@ export default defineUserConfig({
       },
       '/', 
       '/get-started', 
-      'setGithubActions'
+      'setGithubActions',
+      '/zh/freeMovie',
     ],
     /**
      * Logo 图片的 URL。
