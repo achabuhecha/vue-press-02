@@ -183,5 +183,9 @@ export default defineUserConfig({
      */
     contributors: true
   }),
+  // 配置 404 页面使用自定义布局
+  notFoundPage: {
+    layout: 'Custom404'
+  },
   bundler: viteBundler(),
 })

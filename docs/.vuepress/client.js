@@ -1,8 +1,8 @@
-// import { defineClientConfig } from 'vuepress/client'
-// import Layout from './layouts/Layout.vue'
+import { defineClientConfig } from 'vuepress/client'
+import NotFound from './layouts/NotFound.vue'
 
-// export default defineClientConfig({
-//   layouts: {
-//     Layout,
-//   },
-// })
+export default defineClientConfig({
+  layouts: {
+    NotFound,
+  },
+})
