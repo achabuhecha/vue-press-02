@@ -6,42 +6,42 @@ export default defineUserConfig({
   // https://achabuhecha.github.io/vue-press-02/
   base: '/vue-press-02/',
   // base: process.env.VUEPRESS_BASE || '/',
-  lang: 'zh-CN', // en-US
-  title: '自定义X',
+  // lang: 'zh-CN', // en-US
+  title: '我的自由站',
   locales: {
     // 键名是该语言所属的子路径
     // 作为特例，默认语言可以使用 '/' 作为其路径。
-    '/': {
-      lang: 'en-US',
-      // title: 'MY SITE',
-      description: 'Vue-powered Static Site Generator',
-      selectLanguageName: 'EnglishX',
-    },
-    '/zh/': {
-      lang: 'zh-CN',
-      // title: '我的站点',
-      description: 'Vue 驱动的静态网站生成器',
-      selectLanguageName: '简体中文X',
-    },
+    // '/': {
+    //   lang: 'en-US',
+    //   title: 'MY SITE',
+    //   description: 'Vue-powered Static Site Generator',
+    //   selectLanguageName: 'EnglishX',
+    // },
+    // '/zh/': {
+    //   lang: 'zh-CN',
+    //   title: '我的自由站',
+    //   description: '我的自由站：记录个人学习、生活中的经验、技术、观点等内容',
+    //   selectLanguageName: '简体中文',
+    // },
   },
-  description: 'My first VuePress Site',
+  description: '我的自由站：记录个人学习、生活中的经验、技术、观点等内容',
 
   theme: defaultTheme({
     // hostname: 'https://vuepress.vuejs.org', // 部署的域名，例如 https://vuepress.vuejs.org
-    locales: {
-      '/': {
-        repoLabel: 'GitHub',
-        navbarLabel: 'my site X',
-        selectLanguageText: 'Switch Language',
-        selectLanguageName: 'English',
-      },
-      '/zh/': {
-        repoLabel: '给特哈勃',
-        navbarLabel: '我的站点 X',
-        selectLanguageText: '选择语言',
-        selectLanguageName: '简体中文',
-      },
-    },
+    // locales: {
+    //   '/': {
+    //     repoLabel: 'GitHub',
+    //     navbarLabel: 'my site X',
+    //     selectLanguageText: 'Switch Language',
+    //     selectLanguageName: 'English',
+    //   },
+    //   '/zh/': {
+    //     repoLabel: '给特哈勃',
+    //     navbarLabel: '我的站点 X',
+    //     selectLanguageText: '选择语言',
+    //     selectLanguageName: '简体中文',
+    //   },
+    // },
     // [true | false] 是否启用切换颜色模式的功能。默认为 true ，会在导航栏展示一个切换颜色模式的按钮。
     colorModeSwitch: true,
     // ['auto' | 'light' | 'dark'] 默认颜色模式。默认为 'auto' ，会根据 prefers-color-scheme 自动设置初始颜色模式。
@@ -62,41 +62,44 @@ export default defineUserConfig({
      */
     navbar: [
       {
-        text: 'Group',
-        prefix: '/group/',
+        text: '网络编程',
+        prefix: '/网络编程/',
         children: [
           {
-            text: 'SubGroup1',
-            prefix: 'sub1/',
-            children: [
-              'foo.md', // 解析为 `/guide/group/sub1/bar.md`
-              'bar.md', // 解析为 `/guide/group/sub1/bar.md`
-
-              // 一个外部链接
+            text: '前端开发',
+            prefix: 'front/',
+            children: ['javascript', 'Vue2', 'Vue3',
+            // children: [
+            //   { text: 'Javascript', link: '/javascript简介.md' },
+            //   { text: 'Vue2知识点', link: '/Vue2.md' },
+            //   { text: 'Vue3知识点', link: '/网络编程/Vue3.md' },
+              // 外部链接
               {
-                text: 'Example',
-                link: 'https://example.com',
+                text: 'Vue2官网',
+                link: 'https://v2.cn.vuejs.org',
+              },
+              {
+                text: 'Vue3官网',
+                link: 'https://cn.vuejs.org',
               },
             ],
           },
           {
-            text: 'SubGroup2',
-            prefix: 'sub2/',
-            // 项目内链接的 .md 或 .html 后缀是可以省略的
-            children: [
-              'foo', // 解析为 `/guide/group/sub2/foo.md`
-              'bar', // 解析为 `/guide/group/sub2/bar.md`
-
-              // 不在 SubGroup2 内的链接
-              '/baz/', // 解析为 `/baz/README.md`
+            text: '后端开发',
+            prefix: 'server/',
+            children: ['node',
+              {
+                text: 'Node官网',
+                link: 'https://nodejs.org/zh-cn',
+              }
             ],
           },
         ],
       },
-      '/', 
-      '/get-started', 
-      'setGithubActions',
-      '/zh/freeMovie',
+      // '/',
+      // '/get-started', 
+      // 'setGithubActions',
+      '/自动部署',
     ],
     /**
      * Logo 图片的 URL。
@@ -122,7 +125,7 @@ export default defineUserConfig({
       你也可以直接将它设置为一个 URL
       repo: 'https://gitlab.com/foo/bar',
      */
-    repo: 'https://github.com/vuepress/vuepress.git',
+    repo: 'https://github.com/achabuhecha/vue-press-02.git',
     /**
      * 侧边栏配置。
         默认值： 'heading'
@@ -180,6 +183,5 @@ export default defineUserConfig({
      */
     contributors: true
   }),
-
   bundler: viteBundler(),
 })
