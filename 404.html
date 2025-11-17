@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="generator" content="VuePress 2.0.0-rc.20" />
+    <style>
+      :root {
+        --vp-c-bg: #fff;
+      }
+
+      [data-theme='dark'] {
+        --vp-c-bg: #1b1b1f;
+      }
+
+      html,
+      body {
+        background-color: var(--vp-c-bg);
+      }
+    </style>
+    <script>
+      const useChoice = localStorage.getItem('vuepress-color-scheme')
+      const systemStatus =
+        'matchMedia' in window
+          ? window.matchMedia('(prefers-color-scheme: dark)').matches
+          : false
+
+      if (useChoice === 'light') {
+        document.documentElement.dataset.theme = 'light'
+      } else if (useChoice === 'dark' || systemStatus) {
+        document.documentElement.dataset.theme = 'dark'
+      }
+    </script>
+    <title>页面未找到 | 我的自由站</title><meta name="description" content="我的自由站：记录个人学习、生活中的经验、技术、观点等内容">
+    <link rel="preload" href="/vue-press-02/assets/style-ChFF1pkg.css" as="style"><link rel="stylesheet" href="/vue-press-02/assets/style-ChFF1pkg.css">
+    <link rel="modulepreload" href="/vue-press-02/assets/app-D4UKYTdc.js"><link rel="modulepreload" href="/vue-press-02/assets/404.html-C6qOmYLr.js">
+    <link rel="prefetch" href="/vue-press-02/assets/index.html-DP7Rw1uY.js" as="script"><link rel="prefetch" href="/vue-press-02/assets/tvbox.html-DxejhZ4Y.js" as="script"><link rel="prefetch" href="/vue-press-02/assets/自动部署.html-CafgBzLh.js" as="script"><link rel="prefetch" href="/vue-press-02/assets/Vue2.html-DjxJKI7J.js" as="script"><link rel="prefetch" href="/vue-press-02/assets/Vue3.html-B8uUmfPh.js" as="script"><link rel="prefetch" href="/vue-press-02/assets/javascript.html-CNZoRdKI.js" as="script"><link rel="prefetch" href="/vue-press-02/assets/node.html-CfVL-1ag.js" as="script">
+  </head>
+  <body>
+    <div id="app"><!--[--><div class="not-found-container" data-v-a4c6897d><div class="not-found-content" data-v-a4c6897d><div class="image-container" data-v-a4c6897d><img src="https://vuejs.press/images/hero.png" alt="404 Not Found" class="not-found-image" data-v-a4c6897d></div><div class="text-content" data-v-a4c6897d><h1 class="error-code" data-v-a4c6897d>404</h1><h2 class="error-title" data-v-a4c6897d>页面未找到</h2><p class="error-description" data-v-a4c6897d> 抱歉，您访问的页面不存在或已被移除。 </p><p class="error-tip" data-v-a4c6897d> 请检查您输入的网址是否正确，或返回首页继续浏览。 </p><button class="pre-button" data-v-a4c6897d> 返回上一页 </button><button class="home-button" data-v-a4c6897d> 返回首页 </button></div></div></div><!--[--><!----><!--]--><!--]--></div>
+    <script type="module" src="/vue-press-02/assets/app-D4UKYTdc.js" defer></script>
+  </body>
+</html>
